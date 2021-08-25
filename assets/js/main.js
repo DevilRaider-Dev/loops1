@@ -73,7 +73,7 @@ output.innerHTML += '<input type="number" id="input"><input type="button" value=
 function print() {
 
     input = Number(document.getElementById("input").value);
-    result.innerHTML = ""
+    result.innerHTML = "   "
     for (let e of words) {
         if (e.length == input) {
             result.innerHTML += `${e}, `;
@@ -83,7 +83,7 @@ function print() {
 
 output.innerHTML += "<br><br><br>Aufgabe 9 Bonus<br><br>";
 
-output.innerHTML += '<input type="text" id="input2"><input type="button" value="add word" onclick="add()"><br><br><label for="" id="result2"></label>';
+output.innerHTML += '<input type="text" id="input2"><input type="button" value="add word" onclick="add()"><label for="" id="result2"></label>';
 
 function add() {
 
@@ -94,15 +94,14 @@ function add() {
 
     for (let e of words) {
         if (e == input2) {
-            result2.innerHTML = `${e} ist bereits vorhanden.`;
+            result2.innerHTML = `   ${e} ist bereits vorhanden.`;
             exist = true;
         }
     }
     if (input2 == "") {
-        result2.innerHTML = `Bitte gib ein Wort ein.`;
+        result2.innerHTML = `   Bitte gib ein Wort ein.`;
     } else if (exist == false) {
         words.push(input2)
-        result2.innerHTML = `${input2} wurde hinzugefügt`;
+        result2.innerHTML = `   ${input2} wurde hinzugefügt`;
     }
-    console.log(words)
 }
